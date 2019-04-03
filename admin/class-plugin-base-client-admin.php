@@ -128,6 +128,8 @@ public function remove_dashboard_widgets() {
 
 }
 
+
+
 function remove_submenus() {
 	global $submenu;
 	//Remove Home and Updates

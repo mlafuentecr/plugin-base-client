@@ -157,6 +157,7 @@ class Plugin_Base_Client {
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'remove_logo' );
 	
 		/* REMOVE STUFF */
+	
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'remove_dashboard_widgets' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'remove_submenus' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'removeJunk' );
@@ -176,6 +177,12 @@ class Plugin_Base_Client {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+
+
+			/* REMOVE STUFF */
+			$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'remove_junk' );
+
+		
 
 	}
 
